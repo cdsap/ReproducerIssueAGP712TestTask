@@ -1,0 +1,33 @@
+pluginManagement {
+    repositories {
+       // mavenLocal()
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+plugins {
+    id("com.gradle.enterprise") version "3.7.1"
+    id("com.gradle.common-custom-user-data-gradle-plugin") version "1.7.2"
+}
+
+gradleEnterprise {
+    server = "https://ge.solutions-team.gradle.com"
+    allowUntrustedServer = true
+    buildScan {
+        publishAlways()
+        capture {
+            taskInputFiles = true
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "My Application"
+include ':app'
+include ':library'
