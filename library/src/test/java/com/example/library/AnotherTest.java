@@ -19,6 +19,6 @@ public class WelcomeActivityTest {
 ////            Intent expectedIntent = new Intent(activity, LoginActivity.class);
 ////            Intent actual = shadowOf(RuntimeEnvironment.application).getNextStartedActivity();
 ////            assertEquals(expectedIntent.getComponent(), actual.getComponent());
-        }
+    //    }
     }
 }
