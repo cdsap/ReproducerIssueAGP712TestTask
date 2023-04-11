@@ -7,7 +7,7 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.android.controller.ActivityController;
 
 @RunWith(RobolectricTestRunner.class)
-public class WelcomeActivityTest {
+public class AnotherTest {
 
     @Test
     public void clickingLogin_shouldStartLoginActivity() {
