@@ -1,13 +1,13 @@
 on:
   pull_request:
   push:
-      branches: master
+      branches: using_java17
 jobs:
   temurin:
     strategy:
       matrix:
         os: [ubuntu-latest,macos-latest]
-        java: [11.0.17+8]
+        java: [17]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
