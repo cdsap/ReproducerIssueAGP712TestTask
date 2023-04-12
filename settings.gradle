@@ -1,6 +1,5 @@
 pluginManagement {
     repositories {
-       // mavenLocal()
         gradlePluginPortal()
         google()
         mavenCentral()
@@ -12,7 +11,7 @@ plugins {
 }
 
 gradleEnterprise {
-    server = "https://ge.solutions-team.gradle.com"
+    server = "https://e.grdev.net"
     allowUntrustedServer = true
     buildScan {
         publishAlways()
@@ -29,5 +28,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "My Application"
-include ':app'
 include ':library'
