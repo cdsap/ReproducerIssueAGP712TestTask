@@ -1,6 +1,6 @@
 ### Cache misses for tasks PackageForUnitTest and AndroidUnitTest
 Modules using testOption `includeAndroidResources = true` cause cache misses when building with different
-architectures on the tasks:
+architectures. Tasks affected:
 * PackageForUnitTest
 * AndroidUnitTest
 
