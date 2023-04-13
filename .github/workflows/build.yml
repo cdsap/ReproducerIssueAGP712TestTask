@@ -25,4 +25,4 @@ jobs:
         with:
           name: files-${{ matrix.os }}
           path: |
-                library/build/intermediates/apk_for_local_test/debugUnitTest/*
+                library/build/intermediates/processed_res/debugUnitTest/out/*
