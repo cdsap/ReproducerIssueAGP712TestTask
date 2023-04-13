@@ -1,7 +1,7 @@
 on:
   pull_request:
   push:
-      branches: master
+      branches: getting_outputs
 jobs:
   temurin:
     strategy:
@@ -16,7 +16,13 @@ jobs:
           distribution: temurin
           java-version: ${{ matrix.java }}
       - name: Execute Gradle build
-        run: ./gradlew clean :library:processDebugUnitTestResource
+        run: ./gradlew clean :library:testDebugUnitTest
         env:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GE_API_KEY }}
           AGENT_JAVA_VERSION: "${{ matrix.java }}-temurin"
+      - name: Upload test reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: files
+          path: |
+                library/build/intermediates/apk_for_local_test/debugUnitTest/*
