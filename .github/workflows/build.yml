@@ -23,6 +23,6 @@ jobs:
       - name: Upload test reports
         uses: actions/upload-artifact@v3
         with:
-          name: files
+          name: files-${{ matrix.os }}
           path: |
                 library/build/intermediates/apk_for_local_test/debugUnitTest/*
